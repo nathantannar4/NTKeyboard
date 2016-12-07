@@ -7,12 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3830827A1DF7DA4200459568 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 383C47491DF694AF0006E133 /* Assets.xcassets */; };
 		383C47431DF694AF0006E133 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383C47421DF694AF0006E133 /* AppDelegate.swift */; };
 		383C47451DF694AF0006E133 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383C47441DF694AF0006E133 /* ViewController.swift */; };
 		383C47481DF694AF0006E133 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 383C47461DF694AF0006E133 /* Main.storyboard */; };
 		383C474A1DF694AF0006E133 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 383C47491DF694AF0006E133 /* Assets.xcassets */; };
 		383C474D1DF694AF0006E133 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 383C474B1DF694AF0006E133 /* LaunchScreen.storyboard */; };
+		383C475B1DF695720006E133 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383C475A1DF695720006E133 /* KeyboardViewController.swift */; };
+		383C475F1DF695720006E133 /* NT Keyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 383C47581DF695720006E133 /* NT Keyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		383C475D1DF695720006E133 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 383C47371DF694AF0006E133 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 383C47571DF695720006E133;
+			remoteInfo = "NT Keyboard";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		383C47631DF695720006E133 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				383C475F1DF695720006E133 /* NT Keyboard.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		383C473F1DF694AF0006E133 /* NTKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NTKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,10 +49,20 @@
 		383C47491DF694AF0006E133 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		383C474C1DF694AF0006E133 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		383C474E1DF694AF0006E133 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		383C47581DF695720006E133 /* NT Keyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "NT Keyboard.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		383C475A1DF695720006E133 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		383C475C1DF695720006E133 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		383C473C1DF694AF0006E133 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		383C47551DF695720006E133 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				383C47411DF694AF0006E133 /* NTKeyboard */,
+				383C47591DF695720006E133 /* NT Keyboard */,
 				383C47401DF694AF0006E133 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				383C473F1DF694AF0006E133 /* NTKeyboard.app */,
+				383C47581DF695720006E133 /* NT Keyboard.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -64,6 +103,15 @@
 			path = NTKeyboard;
 			sourceTree = "<group>";
 		};
+		383C47591DF695720006E133 /* NT Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				383C475A1DF695720006E133 /* KeyboardViewController.swift */,
+				383C475C1DF695720006E133 /* Info.plist */,
+			);
+			path = "NT Keyboard";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,15 +122,34 @@
 				383C473B1DF694AF0006E133 /* Sources */,
 				383C473C1DF694AF0006E133 /* Frameworks */,
 				383C473D1DF694AF0006E133 /* Resources */,
+				383C47631DF695720006E133 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				383C475E1DF695720006E133 /* PBXTargetDependency */,
 			);
 			name = NTKeyboard;
 			productName = NTKeyboard;
 			productReference = 383C473F1DF694AF0006E133 /* NTKeyboard.app */;
 			productType = "com.apple.product-type.application";
+		};
+		383C47571DF695720006E133 /* NT Keyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 383C47601DF695720006E133 /* Build configuration list for PBXNativeTarget "NT Keyboard" */;
+			buildPhases = (
+				383C47541DF695720006E133 /* Sources */,
+				383C47551DF695720006E133 /* Frameworks */,
+				383C47561DF695720006E133 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NT Keyboard";
+			productName = "NT Keyboard";
+			productReference = 383C47581DF695720006E133 /* NT Keyboard.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -95,6 +162,11 @@
 				ORGANIZATIONNAME = "Nathan Tannar";
 				TargetAttributes = {
 					383C473E1DF694AF0006E133 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 9EUCWD26TP;
+						ProvisioningStyle = Automatic;
+					};
+					383C47571DF695720006E133 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 9EUCWD26TP;
 						ProvisioningStyle = Automatic;
@@ -115,6 +187,7 @@
 			projectRoot = "";
 			targets = (
 				383C473E1DF694AF0006E133 /* NTKeyboard */,
+				383C47571DF695720006E133 /* NT Keyboard */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +203,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		383C47561DF695720006E133 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3830827A1DF7DA4200459568 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -142,7 +223,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		383C47541DF695720006E133 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				383C475B1DF695720006E133 /* KeyboardViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		383C475E1DF695720006E133 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 383C47571DF695720006E133 /* NT Keyboard */;
+			targetProxy = 383C475D1DF695720006E133 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		383C47461DF694AF0006E133 /* Main.storyboard */ = {
@@ -258,9 +355,11 @@
 		383C47521DF694AF0006E133 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9EUCWD26TP;
 				INFOPLIST_FILE = NTKeyboard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.NathanTannar.NTKeyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -271,12 +370,42 @@
 		383C47531DF694AF0006E133 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9EUCWD26TP;
 				INFOPLIST_FILE = NTKeyboard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.NathanTannar.NTKeyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		383C47611DF695720006E133 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 9EUCWD26TP;
+				INFOPLIST_FILE = "NT Keyboard/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.NathanTannar.NTKeyboard.NT-Keyboard";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		383C47621DF695720006E133 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 9EUCWD26TP;
+				INFOPLIST_FILE = "NT Keyboard/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.NathanTannar.NTKeyboard.NT-Keyboard";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -300,6 +429,16 @@
 				383C47531DF694AF0006E133 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		383C47601DF695720006E133 /* Build configuration list for PBXNativeTarget "NT Keyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				383C47611DF695720006E133 /* Debug */,
+				383C47621DF695720006E133 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
